@@ -8,6 +8,7 @@ With Stumpy you will train models capable of identifying patterns in long sequen
 
 Among the many use cases, this allows you to spot anomalous time series patterns from moving devices in real time and discover devices that behave in a similar manner over the span of long time windows potentially across millions of units.
 
+
 ## Content Overview
 
 The HOL is divided in two parts:
@@ -19,10 +20,12 @@ The HOL is divided in two parts:
 2. MLOps with MLFlow
   - [MLOps with MLFlow](https://github.com/pdefusco/CML_MLOps_Logistics_Mlflow)
 
+
 ## Requirements
 
 * A CML Workspace on version 2.0.43 or above with internet access enabled.
 * Basic familiarity with git, Python and unix scripting.
+
 
 ## Step by Step Instructions
 
@@ -134,7 +137,10 @@ Leave all other fields to default values. Create and then run the job.
 Each notebook can be executed separately and comes with instructions. Before running them please you must be mindful of:
 
 * You will have to update the STORAGE and DATA_CONNECTION variables as you did in the prior step.
+* Scripts in "ipynb" format must be run in CML Sessions with JupyterLab editor. You can launch a concurrent CML Session to do so.
 * Notebook 01B_geospatial_analysis must be run in a new CML Session. This is because Sedona's SedonaContext collides with the SparkContext created in notebook 01A.
+
+Among other things, notebooks 3 and 4 leverage APIv2 to create your PRD project environment. Once you have run these, you will be able to move on to the next step in the labs.
 
 
 ### PRD Project
@@ -149,9 +155,19 @@ In this project you will:
 
 ##### Project Setup
 
+The project has already been created for you in Notebooks 3 and 4 that you executed in the DEV project.
+
 ##### Install Requirements
 
+As in the DEV project, launch a CML Session and install the requirements:
+
+```
+pip3 install -r requirements.txt
+```
+
 ##### Execute Scripts
+
+
 
 
 ## Part 2: MLOps with MLFlow
