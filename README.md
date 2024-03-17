@@ -16,7 +16,7 @@ The HOL is divided in two parts:
   - [DEV Project](https://github.com/pdefusco/CML_MLOps_Logistics_DEV)
   - [PRD Project](https://github.com/pdefusco/CML_MLOps_Logistics_PRD)
 
-2. MLOps with mlflow
+2. MLOps with MLFlow
   - [MLOps with MLFlow](https://github.com/pdefusco/CML_MLOps_Logistics_Mlflow)
 
 ## Requirements
@@ -26,24 +26,104 @@ The HOL is divided in two parts:
 
 ## Step by Step Instructions
 
+## Part 1: MLOps with time series and geospatial data
+
 ### DEV Project
 
 The DEV project hosts artifacts for the development of a model to predict on time series sequences.
 
 In this project you will:
 
-  1. 00 Datagen: Run a CML Job to create your own data in Apache Iceberg table format.
-  2. 01A Maps: Explore geospatial data interactively with Folium and CML Sessions.
-  3. 01B Geospatial: Use Apache Sedona to perform geospatial search on coordinate data.
-  4. 02 Model Training: Familiarize yourself with Stumpy for time series machine learning and train your first models.
-  5. 03 Model Deployment: Deploy a Stumpy time series classifier in an API endpoint in the Production Environment via CML Models and CML APIv2.
-  6. 04 Model Deployment: Deploy a Stumpy time series Unsupervised learning model in an API endpoint in the Production Environment via CML Models and CML APIv2.
+  * 00 Datagen: Run a CML Job to create your own data in Apache Iceberg table format.
+  * 01A Maps: Explore geospatial data interactively with Folium and CML Sessions.
+  * 01B Geospatial: Use Apache Sedona to perform geospatial search on coordinate data.
+  * 02 Model Training: Familiarize yourself with Stumpy for time series machine learning and train your first models.
+  * 03 Model Deployment: Deploy a Stumpy time series classifier in an API endpoint in the Production Environment via CML Models and CML APIv2.
+  * 04 Model Deployment: Deploy a Stumpy time series Unsupervised learning model in an API endpoint in the Production Environment via CML Models and CML APIv2.
 
 ##### Project Setup
 
+Log into the CML Workspace and Create a Project.
+
+In the Project Creation form, ensure that you use a unique name for the project by adding your username to the project name.
+
+Select "git" in the "Initial Setup" page and paste the following URL: https://github.com/pdefusco/CML_MLOps_Logistics_DEV.git
+
+![alt text](img/Logistics1.png)
+
+Next, scroll down to the Runtimes section. Remove the default runtimes and add the Python 3.9 runtimes as shown below:
+
+```
+Editor: Workbench
+Kernel: Python 3.9
+Edition: Standard
+Version: any version is fine.
+```
+
+```
+Editor: JupyterLab
+Kernel: Python 3.9
+Edition: Standard
+Version: any version is fine.
+```
+
+![alt text](img/Logistics2.png)
+
+![alt text](img/Logistics3.png)
+
+Finally, create the CML Project.
+
 ##### Install Requirements
 
-##### Execute Notebooks
+Enter your project and launch a Session with Workbench Editor.
+
+```
+Editor: Workbench
+Kernel: Python 3.9
+Edition: Standard
+Spark Runtime Add-On: Spark 3.2 or above.
+Version: any version is fine.
+Resource Profile: 2 CPU / 4 GB Mem / 0 GPU
+```
+
+Open the terminal window at the top right of your screen and run the following command:
+
+```
+pip3 install -r requirements.txt
+```
+
+![alt text](img/Logistics4.png)
+
+![alt text](img/Logistics5.png)
+
+![alt text](img/Logistics6.png)
+
+The requirements can take up to a couple of minutes to install.
+
+##### Execute Scripts and Notebooks
+
+###### 1. Data Generation
+
+Each lab participant will create synthetic geospatial data and save it to Apache Iceberg table format.
+
+In the same CML Session, open the "00_datagen.py" script and replace the values for the STORAGE and CONNECTION_NAME variables at lines 178 and 179 with the values provided to you by your Workshop Lead.
+
+Create a CML Job with the following configurations:
+
+```
+Name: Data Gen - username
+Script: 00_datagen.py
+Editor: Workbench
+Enable Spark: Spark 3.2 or above
+Schedule: Manual
+Resource Profile: 2 CPU / 4 GB Mem
+```
+
+Leave all other fields to default values. Create and then run the job.
+
+![alt text](img/Logistics7.png)
+
+![alt text](img/Logistics8.png)
 
 ### PRD Project
 
@@ -51,9 +131,9 @@ The PRD project will serve as the production environment for your machine learni
 
 In this project you will:
 
-  1. 05 Model Simulation: create synthetic requests and submit them to the CML Models endpoint.
-  2. 06 Model Monitoring: monitor model resource consumption in Production.
-  3. 07 Model Redeployment: leverage CML APIv2 to redeploy a new model build with additional resources to meet capacity.
+  * 05 Model Simulation: create synthetic requests and submit them to the CML Models endpoint.
+  * 06 Model Monitoring: monitor model resource consumption in Production.
+  * 07 Model Redeployment: leverage CML APIv2 to redeploy a new model build with additional resources to meet capacity.
 
 ##### Project Setup
 
@@ -62,4 +142,19 @@ In this project you will:
 ##### Execute Scripts
 
 
-### Summary and Next Steps
+## Part 2: MLOps with MLFlow
+
+CML supports MLFlow Tracking and Registry. With MLFlow tracking you can execute experiments in CML Sessions, automatically package all dependencies and log all metadata in the Tracking UI. Once a model has been recorded, the Registry allows you to stage your best experiment runs and deploy them within the same or another data science environment.
+
+The Registry is commonly used by teams of Machine Learning Engineers as a system to review and test models before they reach the Production Environment, as well as recover important metadata for ML Governance and Regulatory Compliance.
+
+## Step by Step Instructions
+
+##### Project Setup
+
+##### Install Requirements
+
+##### Execute Scripts
+
+
+## Summary and Next Steps
