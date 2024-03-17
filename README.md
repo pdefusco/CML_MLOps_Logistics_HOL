@@ -125,6 +125,18 @@ Leave all other fields to default values. Create and then run the job.
 
 ![alt text](img/Logistics8.png)
 
+![alt text](img/Logistics9.png)
+
+![alt text](img/Logistics10.png)
+
+###### 2. Notebooks
+
+Each notebook can be executed separately and comes with instructions. Before running them please you must be mindful of:
+
+* You will have to update the STORAGE and DATA_CONNECTION variables as you did in the prior step.
+* Notebook 01B_geospatial_analysis must be run in a new CML Session. This is because Sedona's SedonaContext collides with the SparkContext created in notebook 01A.
+
+
 ### PRD Project
 
 The PRD project will serve as the production environment for your machine learning models.
