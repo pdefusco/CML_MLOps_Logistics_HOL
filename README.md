@@ -151,6 +151,14 @@ Among other things, notebooks 3 and 4 leverage APIv2 to create your PRD project 
 
 The PRD project will serve as the production environment for your machine learning models.
 
+![alt text](img/logistics13.png)
+
+Before executing the scripts, try an API call to teh TimeSeriesQuery model with the following payload.
+
+```
+{"pattern": [54,53,52,51]}
+```
+
 In this project you will:
 
   * 05 Model Simulation: create synthetic requests and submit them to the CML Models endpoint.
@@ -171,7 +179,9 @@ pip3 install -r requirements.txt
 
 ##### Execute Scripts
 
+When you log into the project for the first time you should find two models
 
+Run the scripts in
 
 
 ## Part 2: MLOps with MLFlow
