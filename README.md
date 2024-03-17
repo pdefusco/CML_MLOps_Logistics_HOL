@@ -142,6 +142,10 @@ Each notebook can be executed separately and comes with instructions. Before run
 
 Among other things, notebooks 3 and 4 leverage APIv2 to create your PRD project environment. Once you have run these, you will be able to move on to the next step in the labs.
 
+![alt text](img/logistics11.png)
+
+![alt text](img/logistics12.png)
+
 
 ### PRD Project
 
