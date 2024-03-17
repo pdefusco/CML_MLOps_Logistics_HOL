@@ -49,7 +49,7 @@ In the Project Creation form, ensure that you use a unique name for the project 
 
 Select "git" in the "Initial Setup" page and paste the following URL: https://github.com/pdefusco/CML_MLOps_Logistics_DEV.git
 
-![alt text](img/Logistics1.png)
+![alt text](img/logistics1.png)
 
 Next, scroll down to the Runtimes section. Remove the default runtimes and add the Python 3.9 runtimes as shown below:
 
@@ -67,9 +67,9 @@ Edition: Standard
 Version: any version is fine.
 ```
 
-![alt text](img/Logistics2.png)
+![alt text](img/logistics2.png)
 
-![alt text](img/Logistics3.png)
+![alt text](img/logistics3.png)
 
 Finally, create the CML Project.
 
@@ -92,11 +92,11 @@ Open the terminal window at the top right of your screen and run the following c
 pip3 install -r requirements.txt
 ```
 
-![alt text](img/Logistics4.png)
+![alt text](img/logistics4.png)
 
-![alt text](img/Logistics5.png)
+![alt text](img/logistics5.png)
 
-![alt text](img/Logistics6.png)
+![alt text](img/logistics6.png)
 
 The requirements can take up to a couple of minutes to install.
 
@@ -121,13 +121,13 @@ Resource Profile: 2 CPU / 4 GB Mem
 
 Leave all other fields to default values. Create and then run the job.
 
-![alt text](img/Logistics7.png)
+![alt text](img/logistics7.png)
 
-![alt text](img/Logistics8.png)
+![alt text](img/logistics8.png)
 
-![alt text](img/Logistics9.png)
+![alt text](img/logistics9.png)
 
-![alt text](img/Logistics10.png)
+![alt text](img/logistics10.png)
 
 ###### 2. Notebooks
 
