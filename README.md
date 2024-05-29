@@ -92,6 +92,16 @@ Version: any version is fine.
 
 Finally, create the CML Project.
 
+##### Set Project Environment Variable
+
+Environment variables can be set at the Project or Workspace level in order to both avoid showing protected information and accellerate project parameterization.
+
+Create a project environment variable called "Project User" and store a personal identifier. This will be reused in every script to parameterize database and table names with your unique name, so each workspace user works on an independent dataset.
+
+Navigate to "Project Settings" -> "Advanced" and add a unique user id. **Ensure that it does not include any dots or other special characters**.
+
+![alt text](img/envvar.png)
+
 ##### Install Requirements
 
 Enter your project and launch a Session with Workbench Editor.
